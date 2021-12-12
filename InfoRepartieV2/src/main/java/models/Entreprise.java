@@ -1,42 +1,80 @@
 package models;
 
-public class Entreprise {
-    private Integer Num_Entreprise;
-    private String Raison_sociale ;
-    private String Nom_Contact;
+import javax.persistence.Basic;
+import javax.persistence.Column;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import java.io.Serializable;
+
+@Table(name = "entreprise")
+public class Entreprise implements Serializable {
+
+    @Id
+    @Column(name = "num_entreprise")
+    @Basic(optional = false)
+    private Integer numEntreprise;
+
+    @Column(name = "raison_sociale")
+    private String raisonSociale;
+
+    @Column(name = "nom_contact")
+    private String nomContact;
+
+    @Column(name = "nom_resp")
     private String Nom_Resp;
-    private String Rue_Entreprise;
-    private Integer Cp_Entreprise;
-    private String Ville_Entreprise;
-    private String Tel_Entreprise;
-    private String Fax_Entreprise;
+
+    @Column(name = "rue_entreprise")
+    private String rueEntreprise;
+
+    @Column(name = "cp_entreprise")
+    private Integer cpEntreprise;
+
+    @Column(name = "ville_entreprise")
+    private String villeEntreprise;
+
+    @Column(name = "tel_entreprise")
+    private String telEntreprise;
+
+    @Column(name = "fax_entreprise")
+    private String faxEntreprise;
+
+    @Column(name = "email")
     private String Email;
+
+    @Column(name = "observation")
     private String Observation;
-    private String Site_Entreprise;
+
+    @Column(name = "site_entreprise")
+    private String siteEntreprise;
+
+    @Column(name = "niveau")
     private String Niveau;
 
-    public Integer getNum_Entreprise() {
-        return Num_Entreprise;
+    @Column(name = "en_activite")
+    private Integer enActicité;
+
+    public Integer getNumEntreprise() {
+        return numEntreprise;
     }
 
-    public void setNum_Entreprise(Integer num_Entreprise) {
-        Num_Entreprise = num_Entreprise;
+    public void setNumEntreprise(Integer numEntreprise) {
+        this.numEntreprise = numEntreprise;
     }
 
-    public String getRaison_sociale() {
-        return Raison_sociale;
+    public String getRaisonSociale() {
+        return raisonSociale;
     }
 
-    public void setRaison_sociale(String raison_sociale) {
-        Raison_sociale = raison_sociale;
+    public void setRaisonSociale(String raisonSociale) {
+        this.raisonSociale = raisonSociale;
     }
 
-    public String getNom_Contact() {
-        return Nom_Contact;
+    public String getNomContact() {
+        return nomContact;
     }
 
-    public void setNom_Contact(String nom_Contact) {
-        Nom_Contact = nom_Contact;
+    public void setNomContact(String nomContact) {
+        this.nomContact = nomContact;
     }
 
     public String getNom_Resp() {
@@ -47,44 +85,44 @@ public class Entreprise {
         Nom_Resp = nom_Resp;
     }
 
-    public String getRue_Entreprise() {
-        return Rue_Entreprise;
+    public String getRueEntreprise() {
+        return rueEntreprise;
     }
 
-    public void setRue_Entreprise(String rue_Entreprise) {
-        Rue_Entreprise = rue_Entreprise;
+    public void setRueEntreprise(String rueEntreprise) {
+        this.rueEntreprise = rueEntreprise;
     }
 
-    public Integer getCp_Entreprise() {
-        return Cp_Entreprise;
+    public Integer getCpEntreprise() {
+        return cpEntreprise;
     }
 
-    public void setCp_Entreprise(Integer cp_Entreprise) {
-        Cp_Entreprise = cp_Entreprise;
+    public void setCpEntreprise(Integer cpEntreprise) {
+        this.cpEntreprise = cpEntreprise;
     }
 
-    public String getVille_Entreprise() {
-        return Ville_Entreprise;
+    public String getVilleEntreprise() {
+        return villeEntreprise;
     }
 
-    public void setVille_Entreprise(String ville_Entreprise) {
-        Ville_Entreprise = ville_Entreprise;
+    public void setVilleEntreprise(String villeEntreprise) {
+        this.villeEntreprise = villeEntreprise;
     }
 
-    public String getTel_Entreprise() {
-        return Tel_Entreprise;
+    public String getTelEntreprise() {
+        return telEntreprise;
     }
 
-    public void setTel_Entreprise(String tel_Entreprise) {
-        Tel_Entreprise = tel_Entreprise;
+    public void setTelEntreprise(String telEntreprise) {
+        this.telEntreprise = telEntreprise;
     }
 
-    public String getFax_Entreprise() {
-        return Fax_Entreprise;
+    public String getFaxEntreprise() {
+        return faxEntreprise;
     }
 
-    public void setFax_Entreprise(String fax_Entreprise) {
-        Fax_Entreprise = fax_Entreprise;
+    public void setFaxEntreprise(String faxEntreprise) {
+        this.faxEntreprise = faxEntreprise;
     }
 
     public String getEmail() {
@@ -103,12 +141,12 @@ public class Entreprise {
         Observation = observation;
     }
 
-    public String getSite_Entreprise() {
-        return Site_Entreprise;
+    public String getSiteEntreprise() {
+        return siteEntreprise;
     }
 
-    public void setSite_Entreprise(String site_Entreprise) {
-        Site_Entreprise = site_Entreprise;
+    public void setSiteEntreprise(String siteEntreprise) {
+        this.siteEntreprise = siteEntreprise;
     }
 
     public String getNiveau() {
@@ -119,13 +157,11 @@ public class Entreprise {
         Niveau = niveau;
     }
 
-    public Integer getEn_Activite() {
-        return En_Activite;
+    public Integer getEnActicité() {
+        return enActicité;
     }
 
-    public void setEn_Activite(Integer en_Activite) {
-        En_Activite = en_Activite;
+    public void setEnActicité(Integer enActicité) {
+        this.enActicité = enActicité;
     }
-
-    private Integer En_Activite;
 }
