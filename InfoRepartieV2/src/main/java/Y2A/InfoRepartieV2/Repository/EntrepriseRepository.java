@@ -6,6 +6,4 @@ import org.springframework.stereotype.Component;
 
 @Component
 public interface EntrepriseRepository extends CrudRepository <Entreprise,Integer> {
-
-
 }
