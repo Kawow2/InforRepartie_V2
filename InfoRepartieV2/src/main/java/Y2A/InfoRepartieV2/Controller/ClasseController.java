@@ -15,6 +15,6 @@ public class ClasseController {
 
     @GetMapping("/Classe")
     public Classe Classe(@RequestParam int id) {
-        return classeService.findById(id).get();
+        return classeService.findById(id).get(); // TODO on gère pas les erreurs de non présence de l'optional
     }
 }

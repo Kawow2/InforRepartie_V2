@@ -15,6 +15,6 @@ public class EntrepriseController {
 
     @GetMapping("/Entreprise")
     public Entreprise entreprise(@RequestParam int id) {
-        return entrepriseService.findById(id).get();
+        return entrepriseService.findById(id).get(); // TODO on gère pas les erreurs de non présence de l'optional
     }
 }
