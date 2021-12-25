@@ -1,16 +1,21 @@
 package Y2A.InfoRepartieV2.models;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "mission")
 public class Mission {
 
-    private Integer Num_Mission;
-    private String Libelle;
-    private Integer Num_Stage;
+    @Id
+    @Column(name = "Num_mission")
+    private Integer numMission;
 
-    public Integer getNum_Mission() {
-        return Num_Mission;
-    }
+    @Column(name = "libelle")
+    private String libelle;
 
-    public void setNum_Mission(Integer num_Mission) {
-        Num_Mission = num_Mission;
-    }
+    @Column(name = "num_stage")
+    private Integer numStage;
 }

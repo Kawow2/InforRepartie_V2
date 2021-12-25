@@ -1,20 +1,34 @@
 package Y2A.InfoRepartieV2.models;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="classe")
 public class Classe {
 
-    private Integer id;
-    private String content;
+    @Id
+    @Column(name = "num_classe")
+    private Integer numClasse;
 
-    public Classe(Integer id, String content) {
-        this.id = id;
-        this.content = content;
+    @Column(name = "nom_classe")
+    private String nomClasse;
+
+    public Integer getNumClasse() {
+        return numClasse;
     }
 
-    public Integer getId() {
-        return id;
+    public void setNumClasse(Integer numClasse) {
+        this.numClasse = numClasse;
     }
 
-    public String getContent() {
-        return content;
+    public String getNomClasse() {
+        return nomClasse;
+    }
+
+    public void setNomClasse(String nomClasse) {
+        this.nomClasse = nomClasse;
     }
 }

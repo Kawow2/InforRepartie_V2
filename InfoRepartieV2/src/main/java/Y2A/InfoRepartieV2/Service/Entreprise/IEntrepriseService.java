@@ -1,4 +1,4 @@
-package Y2A.InfoRepartieV2.Service;
+package Y2A.InfoRepartieV2.Service.Entreprise;
 
 import Y2A.InfoRepartieV2.models.Entreprise;
 import org.springframework.stereotype.Service;

@@ -1,14 +1,18 @@
 package Y2A.InfoRepartieV2.models;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "specialite")
 public class Specialite {
-    private Integer Num_Spec;
-    private String Libelle;
 
-    public Integer getNum_Spec() {
-        return Num_Spec;
-    }
+    @Id
+    @Column(name = "num_spec")
+    private Integer numSpec;
 
-    public void setNum_Spec(Integer num_Spec) {
-        Num_Spec = num_Spec;
-    }
+    @Column(name = "libelle")
+    private String libelle;
 }
