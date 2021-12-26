@@ -16,4 +16,9 @@ public class ProfesseurService implements IProfesseurService {
     public Optional<Professeur> findById(Integer id) {
         return professeurRepository.findById(id);
     }
+
+    @Override
+    public boolean isProfesseurExistant(String login, String mdp) {
+        return !professeurRepository.findByLoginAndMdp(login, mdp).isEmpty();
+    }
 }

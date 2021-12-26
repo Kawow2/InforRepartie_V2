@@ -29,7 +29,7 @@ public class Etudiant {
     @Column(name = "mdp")
     private String mdp;
 
-    @Column(name = "num_classe;")
+    @Column(name = "num_classe")
     private Integer numClasse;
 
     @Column(name = "en_activite")

@@ -17,4 +17,10 @@ public class EtudiantService implements IEtudiantService {
     public Optional<Etudiant> findById(Integer id) {
         return etudiantRepository.findById(id);
     }
+
+    @Override
+    public boolean isEtudiantExistant(String login, String mdp) {
+        System.out.println(login);
+        return !etudiantRepository.findByLoginAndMdp(login, mdp).isEmpty();
+    }
 }
