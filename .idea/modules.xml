@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/InfoRepartieV2/InfoRepartieV2.iml" filepath="$PROJECT_DIR$/InfoRepartieV2/InfoRepartieV2.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/InforRepartie_V2.iml" filepath="$PROJECT_DIR$/.idea/InforRepartie_V2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../infoReparti_Front/fo/fo.iml" filepath="$PROJECT_DIR$/../infoReparti_Front/fo/fo.iml" />
     </modules>
   </component>
 </project>
