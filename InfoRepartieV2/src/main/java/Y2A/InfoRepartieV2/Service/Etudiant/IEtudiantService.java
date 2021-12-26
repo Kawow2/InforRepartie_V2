@@ -10,4 +10,6 @@ public interface IEtudiantService {
     Optional<Etudiant> findById(Integer id);
 
     boolean isEtudiantExistant(String login, String mdp);
+
+    Iterable<Etudiant> getAllEtudiant();
 }

@@ -17,4 +17,9 @@ public class EntrepriseService implements IEntrepriseService {
     public Optional<Entreprise> findById(Integer id) {
         return entrepriseRepository.findById(id);
     }
+
+    @Override
+    public Iterable<Entreprise> getAllEntreprise() {
+        return entrepriseRepository.findAll();
+    }
 }

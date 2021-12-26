@@ -1,6 +1,7 @@
 package Y2A.InfoRepartieV2.Controller;
 
 import Y2A.InfoRepartieV2.Service.Etudiant.IEtudiantService;
+import Y2A.InfoRepartieV2.models.Etudiant;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -16,5 +17,10 @@ public class EtudiantController {
     @GetMapping(value = "/existant/{login}/{mdp}")
     public boolean isEtudiantExistant(@PathVariable String login, @PathVariable String mdp) {
         return etudiantService.isEtudiantExistant(login, mdp);
+    }
+
+    @GetMapping(value = "/all")
+    public Iterable<Etudiant> getAllEtudiant() {
+        return etudiantService.getAllEtudiant();
     }
 }
