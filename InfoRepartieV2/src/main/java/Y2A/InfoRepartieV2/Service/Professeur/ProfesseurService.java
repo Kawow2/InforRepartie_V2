@@ -21,4 +21,9 @@ public class ProfesseurService implements IProfesseurService {
     public boolean isProfesseurExistant(String login, String mdp) {
         return !professeurRepository.findByLoginAndMdp(login, mdp).isEmpty();
     }
+
+    @Override
+    public Iterable<Professeur> getAllProfesseur() {
+        return professeurRepository.findAll();
+    }
 }
