@@ -17,4 +17,9 @@ public class SpecEntrepriseService implements ISpecEntrepriseService {
     public Optional<SpecEntreprise> findById(Integer id) {
         return specEntrepriseRepository.findById(id);
     }
+
+    @Override
+    public Iterable<SpecEntreprise> getAllSpecEntreprise() {
+        return specEntrepriseRepository.findAll();
+    }
 }
