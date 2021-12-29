@@ -17,4 +17,10 @@ public class ClasseService implements IClasseService {
     public Optional<Classe> findById(Integer id) {
         return classeRepository.findById(id);
     }
+
+    @Override
+    public Iterable<Classe> getAllClasses() {
+        return classeRepository.findAll();
+    }
+
 }

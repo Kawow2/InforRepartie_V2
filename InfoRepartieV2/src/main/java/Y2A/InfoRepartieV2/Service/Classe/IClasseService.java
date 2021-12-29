@@ -8,4 +8,6 @@ import java.util.Optional;
 @Service
 public interface IClasseService {
     Optional<Classe> findById(Integer id);
+
+    Iterable<Classe> getAllClasses();
 }

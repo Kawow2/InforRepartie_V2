@@ -27,4 +27,9 @@ public class EtudiantService implements IEtudiantService {
     public Iterable<Etudiant> getAllEtudiant() {
         return etudiantRepository.findAll();
     }
+
+    @Override
+    public Etudiant createEtudiant(Etudiant etudiant) {
+        return etudiantRepository.save(etudiant);
+    }
 }
