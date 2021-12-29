@@ -10,4 +10,8 @@ public interface IProfesseurService {
     Optional<Professeur> findById(Integer id);
 
     boolean isProfesseurExistant(String login, String mdp);
+
+    Iterable<Professeur> getAllProfesseur();
+
+
 }

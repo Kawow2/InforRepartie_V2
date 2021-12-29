@@ -8,4 +8,6 @@ import java.util.Optional;
 @Service
 public interface IEntrepriseService {
     Optional<Entreprise> findById(Integer id);
+
+    Iterable<Entreprise> getAllEntreprise();
 }

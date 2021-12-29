@@ -109,4 +109,19 @@ public class Stage {
     public void setNumEntreprise(Integer numEntreprise) {
         this.numEntreprise = numEntreprise;
     }
+
+    @Override
+    public String toString() {
+        return "Stage{" +
+                "numStage=" + numStage +
+                ", debutStage=" + debutStage +
+                ", finStage=" + finStage +
+                ", typeStage='" + typeStage + '\'' +
+                ", descProjet='" + descProjet + '\'' +
+                ", observationStage='" + observationStage + '\'' +
+                ", numEtudiant=" + numEtudiant +
+                ", numProf=" + numProf +
+                ", numEntreprise=" + numEntreprise +
+                '}';
+    }
 }

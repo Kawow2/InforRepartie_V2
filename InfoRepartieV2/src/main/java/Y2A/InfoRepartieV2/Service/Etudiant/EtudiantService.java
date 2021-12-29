@@ -20,7 +20,11 @@ public class EtudiantService implements IEtudiantService {
 
     @Override
     public boolean isEtudiantExistant(String login, String mdp) {
-        System.out.println(login);
         return !etudiantRepository.findByLoginAndMdp(login, mdp).isEmpty();
+    }
+
+    @Override
+    public Iterable<Etudiant> getAllEtudiant() {
+        return etudiantRepository.findAll();
     }
 }

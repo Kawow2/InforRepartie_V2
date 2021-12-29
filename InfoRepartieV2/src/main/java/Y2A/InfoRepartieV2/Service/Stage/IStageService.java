@@ -8,4 +8,6 @@ import java.util.Optional;
 @Service
 public interface IStageService {
     Optional<Stage> findById(Integer id);
+
+    Stage createStage(Stage stage);
 }

@@ -16,4 +16,9 @@ public class StageService implements IStageService {
     public Optional<Stage> findById(Integer id) {
         return stageRepository.findById(id);
     }
+
+    @Override
+    public Stage createStage(Stage stage) {
+        return stageRepository.save(stage);
+    }
 }
