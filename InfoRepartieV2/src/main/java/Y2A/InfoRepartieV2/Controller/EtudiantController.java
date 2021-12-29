@@ -3,10 +3,7 @@ package Y2A.InfoRepartieV2.Controller;
 import Y2A.InfoRepartieV2.Service.Etudiant.IEtudiantService;
 import Y2A.InfoRepartieV2.models.Etudiant;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping(value = "/etudiant")
@@ -22,5 +19,10 @@ public class EtudiantController {
     @GetMapping(value = "/all")
     public Iterable<Etudiant> getAllEtudiant() {
         return etudiantService.getAllEtudiant();
+    }
+
+    @PostMapping(value = "/")
+    public Etudiant CreateEtudaint(@RequestBody Etudiant etudiant) {
+        return etudiantService.createEtudiant(etudiant);
     }
 }

@@ -12,4 +12,6 @@ public interface IEtudiantService {
     boolean isEtudiantExistant(String login, String mdp);
 
     Iterable<Etudiant> getAllEtudiant();
+
+    Etudiant createEtudiant(Etudiant etudiant);
 }
