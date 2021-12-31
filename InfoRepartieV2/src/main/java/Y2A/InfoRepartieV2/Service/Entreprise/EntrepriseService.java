@@ -22,4 +22,9 @@ public class EntrepriseService implements IEntrepriseService {
     public Iterable<Entreprise> getAllEntreprise() {
         return entrepriseRepository.findAll();
     }
+
+    @Override
+    public Entreprise createEntreprise(Entreprise ent) {
+        return entrepriseRepository.save(ent);
+    }
 }
