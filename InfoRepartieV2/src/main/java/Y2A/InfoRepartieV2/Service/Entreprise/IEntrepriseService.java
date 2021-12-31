@@ -10,4 +10,6 @@ public interface IEntrepriseService {
     Optional<Entreprise> findById(Integer id);
 
     Iterable<Entreprise> getAllEntreprise();
+
+    Entreprise createEntreprise(Entreprise ent);
 }
