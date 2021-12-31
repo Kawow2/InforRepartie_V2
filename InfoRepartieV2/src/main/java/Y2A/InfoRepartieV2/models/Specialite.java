@@ -15,4 +15,20 @@ public class Specialite {
 
     @Column(name = "libelle")
     private String libelle;
+
+    public Integer getNumSpec() {
+        return numSpec;
+    }
+
+    public void setNumSpec(Integer numSpec) {
+        this.numSpec = numSpec;
+    }
+
+    public String getLibelle() {
+        return libelle;
+    }
+
+    public void setLibelle(String libelle) {
+        this.libelle = libelle;
+    }
 }

@@ -8,4 +8,7 @@ import java.util.Optional;
 @Service
 public interface ISpecialiteService {
     Optional<Specialite> findById(Integer id);
+
+    Iterable<Specialite> getAllSpecialite();
+
 }

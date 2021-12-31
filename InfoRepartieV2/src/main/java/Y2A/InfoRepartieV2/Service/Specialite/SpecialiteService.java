@@ -17,4 +17,9 @@ public class SpecialiteService implements ISpecialiteService {
     public Optional<Specialite> findById(Integer id) {
         return specialiteRepository.findById(id);
     }
+
+    @Override
+    public Iterable<Specialite> getAllSpecialite() {
+        return specialiteRepository.findAll();
+    }
 }
