@@ -19,7 +19,6 @@ public class EntrepriseController {
 
     @PostMapping(value = "/create")
     public Entreprise createEntreprise(@RequestBody Entreprise ent) {
-        System.out.println(ent.toString());
         return entrepriseService.createEntreprise(ent);
     }
 

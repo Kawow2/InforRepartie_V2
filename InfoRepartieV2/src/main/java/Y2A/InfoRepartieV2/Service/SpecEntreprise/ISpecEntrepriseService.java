@@ -10,4 +10,6 @@ public interface ISpecEntrepriseService {
     Optional<SpecEntreprise> findById(Integer id);
 
     Iterable<SpecEntreprise> getAllSpecEntreprise();
+
+    Iterable<SpecEntreprise> createSpecEntreprise(Iterable<SpecEntreprise> specs);
 }
