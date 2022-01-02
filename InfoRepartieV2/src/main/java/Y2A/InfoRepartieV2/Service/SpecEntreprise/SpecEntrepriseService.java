@@ -22,4 +22,9 @@ public class SpecEntrepriseService implements ISpecEntrepriseService {
     public Iterable<SpecEntreprise> getAllSpecEntreprise() {
         return specEntrepriseRepository.findAll();
     }
+
+    @Override
+    public Iterable<SpecEntreprise> createSpecEntreprise(Iterable<SpecEntreprise> specs) {
+        return specEntrepriseRepository.saveAll(specs);
+    }
 }

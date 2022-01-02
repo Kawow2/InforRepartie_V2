@@ -10,6 +10,7 @@ public class Entreprise implements Serializable {
 
     @Id
     @Column(name = "num_entreprise")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Basic(optional = false)
     private Integer numEntreprise;
 
@@ -20,7 +21,7 @@ public class Entreprise implements Serializable {
     private String nomContact;
 
     @Column(name = "nom_resp")
-    private String Nom_Resp;
+    private String nomResp;
 
     @Column(name = "rue_entreprise")
     private String rueEntreprise;
@@ -50,7 +51,7 @@ public class Entreprise implements Serializable {
     private String Niveau;
 
     @Column(name = "en_activite")
-    private Integer enActicite;
+    private Integer enActivite;
 
     public Integer getNumEntreprise() {
         return numEntreprise;
@@ -76,12 +77,12 @@ public class Entreprise implements Serializable {
         this.nomContact = nomContact;
     }
 
-    public String getNom_Resp() {
-        return Nom_Resp;
+    public String getNomResp() {
+        return nomResp;
     }
 
-    public void setNom_Resp(String nom_Resp) {
-        Nom_Resp = nom_Resp;
+    public void setNomResp(String nomResp) {
+        this.nomResp = nomResp;
     }
 
     public String getRueEntreprise() {
@@ -156,12 +157,12 @@ public class Entreprise implements Serializable {
         Niveau = niveau;
     }
 
-    public Integer getEnActicite() {
-        return enActicite;
+    public Integer getEnActivite() {
+        return enActivite;
     }
 
-    public void setEnActicite(Integer enActicite) {
-        this.enActicite = enActicite;
+    public void setEnActivite(Integer enActicite) {
+        this.enActivite = enActicite;
     }
 
     @Override
@@ -169,12 +170,12 @@ public class Entreprise implements Serializable {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Entreprise that = (Entreprise) o;
-        return Objects.equals(numEntreprise, that.numEntreprise) && Objects.equals(raisonSociale, that.raisonSociale) && Objects.equals(nomContact, that.nomContact) && Objects.equals(Nom_Resp, that.Nom_Resp) && Objects.equals(rueEntreprise, that.rueEntreprise) && Objects.equals(cpEntreprise, that.cpEntreprise) && Objects.equals(villeEntreprise, that.villeEntreprise) && Objects.equals(telEntreprise, that.telEntreprise) && Objects.equals(faxEntreprise, that.faxEntreprise) && Objects.equals(Email, that.Email) && Objects.equals(Observation, that.Observation) && Objects.equals(siteEntreprise, that.siteEntreprise) && Objects.equals(Niveau, that.Niveau) && Objects.equals(enActicite, that.enActicite);
+        return Objects.equals(numEntreprise, that.numEntreprise) && Objects.equals(raisonSociale, that.raisonSociale) && Objects.equals(nomContact, that.nomContact) && Objects.equals(nomResp, that.nomResp) && Objects.equals(rueEntreprise, that.rueEntreprise) && Objects.equals(cpEntreprise, that.cpEntreprise) && Objects.equals(villeEntreprise, that.villeEntreprise) && Objects.equals(telEntreprise, that.telEntreprise) && Objects.equals(faxEntreprise, that.faxEntreprise) && Objects.equals(Email, that.Email) && Objects.equals(Observation, that.Observation) && Objects.equals(siteEntreprise, that.siteEntreprise) && Objects.equals(Niveau, that.Niveau) && Objects.equals(enActivite, that.enActivite);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(numEntreprise, raisonSociale, nomContact, Nom_Resp, rueEntreprise, cpEntreprise, villeEntreprise, telEntreprise, faxEntreprise, Email, Observation, siteEntreprise, Niveau, enActicite);
+        return Objects.hash(numEntreprise, raisonSociale, nomContact, nomResp, rueEntreprise, cpEntreprise, villeEntreprise, telEntreprise, faxEntreprise, Email, Observation, siteEntreprise, Niveau, enActivite);
     }
 
     @Override
@@ -183,7 +184,7 @@ public class Entreprise implements Serializable {
                 "numEntreprise=" + numEntreprise +
                 ", raisonSociale='" + raisonSociale + '\'' +
                 ", nomContact='" + nomContact + '\'' +
-                ", Nom_Resp='" + Nom_Resp + '\'' +
+                ", Nom_Resp='" + nomResp + '\'' +
                 ", rueEntreprise='" + rueEntreprise + '\'' +
                 ", cpEntreprise=" + cpEntreprise +
                 ", villeEntreprise='" + villeEntreprise + '\'' +
@@ -193,7 +194,7 @@ public class Entreprise implements Serializable {
                 ", Observation='" + Observation + '\'' +
                 ", siteEntreprise='" + siteEntreprise + '\'' +
                 ", Niveau='" + Niveau + '\'' +
-                ", enActicite=" + enActicite +
+                ", enActivite=" + enActivite +
                 '}';
     }
 }
