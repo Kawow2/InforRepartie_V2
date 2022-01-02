@@ -10,6 +10,7 @@ public class Entreprise implements Serializable {
 
     @Id
     @Column(name = "num_entreprise")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Basic(optional = false)
     private Integer numEntreprise;
 

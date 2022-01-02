@@ -1,18 +1,18 @@
 package Y2A.InfoRepartieV2.models;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity
 @Table(name = "spec_entreprise")
-public class SpecEntreprise {
+@IdClass(SpecEntreprise.class)
+public class SpecEntreprise implements Serializable {
 
     @Id
     @Column(name = "num_entreprise")
     private Integer numEntreprise;
 
+    @Id
     @Column(name = "num_spec")
     private Integer numSpec;
 
