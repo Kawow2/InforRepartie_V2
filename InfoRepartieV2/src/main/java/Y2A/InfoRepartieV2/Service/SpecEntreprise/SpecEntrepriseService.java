@@ -4,6 +4,7 @@ import Y2A.InfoRepartieV2.Repository.SpecEntrepriseRepository;
 import Y2A.InfoRepartieV2.models.SpecEntreprise;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Optional;
 
@@ -27,4 +28,11 @@ public class SpecEntrepriseService implements ISpecEntrepriseService {
     public Iterable<SpecEntreprise> createSpecEntreprise(Iterable<SpecEntreprise> specs) {
         return specEntrepriseRepository.saveAll(specs);
     }
+
+    @Override
+    @Transactional
+    public void deleteSpecFromEntreprise(int id) {
+        specEntrepriseRepository.deleteSpecEntrepriseByNumEntreprise(id);
+    }
 }
+

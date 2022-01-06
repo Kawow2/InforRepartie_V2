@@ -1,9 +1,6 @@
 package Y2A.InfoRepartieV2.models;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.Date;
 
 @Entity
@@ -12,6 +9,7 @@ public class Etudiant {
 
     @Id
     @Column(name = "num_etudiant")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer numEtudiant;
 
     @Column(name = "nom_etudiant")

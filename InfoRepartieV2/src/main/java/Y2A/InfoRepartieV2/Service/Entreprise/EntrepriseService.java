@@ -27,4 +27,10 @@ public class EntrepriseService implements IEntrepriseService {
     public Entreprise createEntreprise(Entreprise ent) {
         return entrepriseRepository.save(ent);
     }
+
+    @Override
+    public int deleteEntreprise(int id) {
+        entrepriseRepository.deleteById(id);
+        return id;
+    }
 }

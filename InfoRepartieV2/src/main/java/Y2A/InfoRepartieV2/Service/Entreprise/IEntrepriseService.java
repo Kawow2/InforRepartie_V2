@@ -12,4 +12,6 @@ public interface IEntrepriseService {
     Iterable<Entreprise> getAllEntreprise();
 
     Entreprise createEntreprise(Entreprise ent);
+
+    int deleteEntreprise(int id);
 }

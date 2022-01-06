@@ -4,7 +4,9 @@ import Y2A.InfoRepartieV2.Repository.StageRepository;
 import Y2A.InfoRepartieV2.models.Stage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
+import java.util.ArrayList;
 import java.util.Optional;
 
 @Service
@@ -20,5 +22,16 @@ public class StageService implements IStageService {
     @Override
     public Stage createStage(Stage stage) {
         return stageRepository.save(stage);
+    }
+
+    @Override
+    @Transactional
+    public void deleteStageFromEnterprise(ArrayList<Integer> ids) {
+        stageRepository.deleteAllById(ids);
+    }
+
+    @Override
+    public Iterable<Stage> getStagesFromEntreprise(int id) {
+        return stageRepository.getAllByNumEntreprise(id);
     }
 }
