@@ -21,4 +21,9 @@ public class SpecEntrepriseController {
     public Iterable<SpecEntreprise> createSpecEnterprise(@RequestBody Iterable<SpecEntreprise> specs) {
         return specEntrepriseService.createSpecEntreprise(specs);
     }
+
+    @DeleteMapping(value = "/{id}")
+    public void DeleteSpecFromEntreprise(@PathVariable int id) {
+        specEntrepriseService.deleteSpecFromEntreprise(id);
+    }
 }

@@ -6,4 +6,10 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface StageRepository extends CrudRepository<Stage, Integer> {
+
+    void deleteAllByNumEntreprise(int id);
+
+    Iterable<Stage> getAllByNumEntreprise(int id);
+
+
 }
