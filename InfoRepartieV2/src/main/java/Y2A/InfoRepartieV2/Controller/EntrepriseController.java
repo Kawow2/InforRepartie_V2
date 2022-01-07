@@ -28,7 +28,7 @@ public class EntrepriseController {
     private IMissionService missionService;
 
     @GetMapping(value = "/all")
-    public Iterable<Entreprise> isEtudiantExistant() {
+    public Iterable<Entreprise> getAllEntreprise() {
         return entrepriseService.getAllEntreprise();
     }
 
