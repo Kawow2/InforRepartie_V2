@@ -30,6 +30,11 @@ public class SpecEntrepriseService implements ISpecEntrepriseService {
     }
 
     @Override
+    public Iterable<SpecEntreprise> findAllByNumEntreprise(int id) {
+        return this.specEntrepriseRepository.findAllByNumEntreprise(id);
+    }
+
+    @Override
     @Transactional
     public void deleteSpecFromEntreprise(int id) {
         specEntrepriseRepository.deleteSpecEntrepriseByNumEntreprise(id);
