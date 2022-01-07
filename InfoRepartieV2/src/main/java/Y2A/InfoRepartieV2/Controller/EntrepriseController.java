@@ -6,6 +6,8 @@ import Y2A.InfoRepartieV2.Service.SpecEntreprise.ISpecEntrepriseService;
 import Y2A.InfoRepartieV2.Service.Stage.IStageService;
 import Y2A.InfoRepartieV2.models.Entreprise;
 import Y2A.InfoRepartieV2.models.Mission;
+import Y2A.InfoRepartieV2.models.Output.EntrepriseEtSpec;
+import Y2A.InfoRepartieV2.models.SpecEntreprise;
 import Y2A.InfoRepartieV2.models.Stage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -32,6 +34,7 @@ public class EntrepriseController {
 
     @PostMapping(value = "/create")
     public Entreprise createEntreprise(@RequestBody Entreprise ent) {
+        this.specEntrepriseService.deleteSpecFromEntreprise(ent.getNumEntreprise());
         return entrepriseService.createEntreprise(ent);
     }
 
@@ -53,5 +56,16 @@ public class EntrepriseController {
         return entrepriseService.deleteEntreprise(id);
     }
 
+
+    @GetMapping(value = "/{id}")
+    public EntrepriseEtSpec getEntreprise(@PathVariable int id) {
+
+        EntrepriseEtSpec entrepriseEtSpec = this.entrepriseService.findEntrepriseAndSpecById(id);
+
+        Iterable<SpecEntreprise> specEntreprises = this.specEntrepriseService.findAllByNumEntreprise(entrepriseEtSpec.getEntreprise().get().getNumEntreprise());
+        entrepriseEtSpec.setSpecEntreprises(specEntreprises);
+
+        return entrepriseEtSpec;
+    }
 
 }

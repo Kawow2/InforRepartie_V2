@@ -13,5 +13,8 @@ public interface ISpecEntrepriseService {
 
     Iterable<SpecEntreprise> createSpecEntreprise(Iterable<SpecEntreprise> specs);
 
+    Iterable<SpecEntreprise> findAllByNumEntreprise(int id);
+
     void deleteSpecFromEntreprise(int id);
+
 }

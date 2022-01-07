@@ -8,4 +8,7 @@ import org.springframework.stereotype.Repository;
 public interface SpecEntrepriseRepository extends CrudRepository<SpecEntreprise, Integer> {
 
     Iterable<SpecEntreprise> deleteSpecEntrepriseByNumEntreprise(int id);
+
+    Iterable<SpecEntreprise> findAllByNumEntreprise(int id);
+
 }
