@@ -15,4 +15,6 @@ public interface IStageService {
     void deleteStageFromEnterprise(ArrayList<Integer> ids);
 
     Iterable<Stage> getStagesFromEntreprise(int id);
+
+    Optional<Stage> getStage(int id);
 }

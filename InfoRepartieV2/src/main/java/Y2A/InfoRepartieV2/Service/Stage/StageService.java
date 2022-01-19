@@ -34,4 +34,9 @@ public class StageService implements IStageService {
     public Iterable<Stage> getStagesFromEntreprise(int id) {
         return stageRepository.getAllByNumEntreprise(id);
     }
+
+    @Override
+    public Optional<Stage> getStage(int id) {
+        return stageRepository.findById(id);
+    }
 }
