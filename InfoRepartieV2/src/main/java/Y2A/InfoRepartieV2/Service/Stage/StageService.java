@@ -39,4 +39,9 @@ public class StageService implements IStageService {
     public Optional<Stage> getStage(int id) {
         return stageRepository.findById(id);
     }
+
+    @Override
+    public Iterable<Stage> getAllStages() {
+        return stageRepository.findAll();
+    }
 }

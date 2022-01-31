@@ -17,4 +17,6 @@ public interface IStageService {
     Iterable<Stage> getStagesFromEntreprise(int id);
 
     Optional<Stage> getStage(int id);
+
+    Iterable<Stage> getAllStages();
 }

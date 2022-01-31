@@ -24,6 +24,11 @@ public class StageController {
         return stageService.getStagesFromEntreprise(id);
     }
 
+    @GetMapping(value = "/all")
+    public Iterable<Stage> GettAllStage() {
+        return stageService.getAllStages();
+    }
+
     @GetMapping(value = "/{id}")
     public Optional<Stage> GetStage(@PathVariable int id) {
         return stageService.getStage(id);
