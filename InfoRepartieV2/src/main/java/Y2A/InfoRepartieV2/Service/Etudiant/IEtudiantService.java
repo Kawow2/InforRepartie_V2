@@ -14,4 +14,6 @@ public interface IEtudiantService {
     Iterable<Etudiant> getAllEtudiant();
 
     Etudiant createEtudiant(Etudiant etudiant);
+
+    int deleteEtudiant(int id);
 }

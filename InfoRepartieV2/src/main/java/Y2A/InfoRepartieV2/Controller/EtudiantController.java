@@ -21,6 +21,12 @@ public class EtudiantController {
         return etudiantService.getAllEtudiant();
     }
 
+    @DeleteMapping(value = "/{id}")
+    public int deleteEtudiant(@PathVariable int id) {
+        return etudiantService.deleteEtudiant(id);
+    }
+
+
     @PostMapping(value = "/")
     public Etudiant CreateEtudaint(@RequestBody Etudiant etudiant) {
         return etudiantService.createEtudiant(etudiant);

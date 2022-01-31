@@ -32,4 +32,10 @@ public class EtudiantService implements IEtudiantService {
     public Etudiant createEtudiant(Etudiant etudiant) {
         return etudiantRepository.save(etudiant);
     }
+
+    @Override
+    public int deleteEtudiant(int id) {
+        etudiantRepository.deleteById(id);
+        return id;
+    }
 }
