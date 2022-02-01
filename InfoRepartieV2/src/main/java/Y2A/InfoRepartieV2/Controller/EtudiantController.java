@@ -5,6 +5,8 @@ import Y2A.InfoRepartieV2.models.Etudiant;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Optional;
+
 @RestController
 @RequestMapping(value = "/etudiant")
 public class EtudiantController {
@@ -19,6 +21,11 @@ public class EtudiantController {
     @GetMapping(value = "/all")
     public Iterable<Etudiant> getAllEtudiant() {
         return etudiantService.getAllEtudiant();
+    }
+
+    @GetMapping(value = "/{id}")
+    public Optional<Etudiant> getEtudiantById(@PathVariable int id) {
+        return etudiantService.getEtudiantById(id);
     }
 
     @DeleteMapping(value = "/{id}")

@@ -38,4 +38,9 @@ public class EtudiantService implements IEtudiantService {
         etudiantRepository.deleteById(id);
         return id;
     }
+
+    @Override
+    public Optional<Etudiant> getEtudiantById(int id) {
+        return etudiantRepository.findById(id);
+    }
 }
